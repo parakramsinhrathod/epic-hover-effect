@@ -1,0 +1,40 @@
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: rgb(16 23 24);
+    margin: 0;
+    padding: 1rem;
+    overflow-x: hidden;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+#card{
+    width: 580px;
+    aspect-ratio: 2/3;
+    border: 0.25rem solid  rgb(255, 255, 255 / 15%  );
+}
+#card > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: url(#noise);
+}
+
+#card:hover > img{
+    animation: pulse 800ms ease-in-out;
+}
+
+@keyframes pulse{
+    from, to {
+        scale: 1;
+    }
+    50%{
+        scale: 1.08;
+    }
+    
+}
